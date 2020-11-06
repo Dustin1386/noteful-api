@@ -11,7 +11,7 @@
     "start": "node src/server.js",
     "predeploy": "npm audit && npm run migrate:production",
     "deploy": "git push heroku master",
-   "postdeploy": "npm run migrate:production"
+    "postdeploy": "npm run migrate:production"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +26,8 @@
     "morgan": "^1.10.0",
     "pg": "^8.4.2",
     "postgrator": "^4.1.1",
-    "postgrator-cli": "^4.0.0"
+    "postgrator-cli": "^4.0.0",
+    "xss": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.2.0",
