@@ -16,7 +16,7 @@ const morganOption = (NODE_ENV === 'production')
 app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors({
-  origin: 'https://noteful-lk6n4z5wu.vercel.app/'
+  origin: 'https://noteful-client1-pink.vercel.app'
 }))
 
 app.get('/', (req,res)=>{
