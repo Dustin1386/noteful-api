@@ -16,7 +16,9 @@ const morganOption = (NODE_ENV === 'production')
 
 app.use(morgan(morganOption))
 app.use(helmet())
-app.use(cors())
+app.use(cors({
+  origin: 'https://noteful-lk6n4z5wu.vercel.app/'
+}))
 
 app.get('/', (req,res)=>{
     res.send('Hello,world!')
@@ -32,7 +34,7 @@ app.use(function errorHandler(error, req, res, next){
     console.error(error)
     response ={messag:error.message, error}
   }
-  res.status(500).json(resonse)
+  res.status(500).json(response)
 })
 
 module.exports = app
